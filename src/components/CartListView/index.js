@@ -1,5 +1,6 @@
 import CartContext from '../../context/CartContext'
 import CartItem from '../CartItem'
+import PaymentPopup from '../PaymentPopup'
 import EmptyCartView from '../EmptyCartView'
 import './index.css'
 
@@ -7,6 +8,8 @@ const CartListView = () => (
   <CartContext.Consumer>
     {value => {
       const {cartList, removeAllCartItems} = value
+
+      const checkoutHandler = () => {}
 
       if (!Array.isArray(cartList) || cartList.length === 0) {
         return <EmptyCartView />
@@ -32,20 +35,24 @@ const CartListView = () => (
             <p>{`${totalItems} ${
               totalItems > 1 ? 'Items' : 'Item'
             } in cart`}</p>
-            <button
-              type="button"
-              className="checkout-button"
-              aria-label="Checkout"
-            >
-              Checkout
-            </button>
-            <button
-              type="button"
-              className="remove-all-button"
-              onClick={removeAllCartItems}
-            >
-              Remove All
-            </button>
+            <div className="btn-section">
+              <button
+                type="button"
+                className="checkout-button"
+                aria-label="Checkout"
+                onClick={checkoutHandler()}
+              >
+                Checkout
+              </button>
+              <PaymentPopup totalAmount={totalAmount} totalItems={totalItems} />
+              <button
+                type="button"
+                className="remove-all-button"
+                onClick={removeAllCartItems}
+              >
+                Remove All
+              </button>
+            </div>
           </div>
         </div>
       )

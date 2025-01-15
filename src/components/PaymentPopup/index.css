@@ -1,0 +1,67 @@
+.modal {
+  color: white;
+  background: #5072a7;
+  border-radius: 12px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 10px 24px;
+  min-height: 78vh;
+  margin: 0px auto;
+  font-size: 18px;
+  width: 80%;
+  height: 50vh;
+}
+.modal > .header {
+  width: 100%;
+  font-size: 38px;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px;
+  margin: 0px auto;
+}
+.modal > .content {
+  width: 80%;
+  padding: 10px 5px;
+  margin: 0px auto;
+}
+.modal > .actions {
+  width: 80%;
+  margin: 0px auto;
+  padding: 10px 5px;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #d8bfd8;
+  border-radius: 18px;
+  border: 2px solid #452c63;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.payment-options {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+}
+.cart-summery {
+  color: aliceblue;
+  font-weight: 500;
+}
+.summery-of-payment {
+  font-size: 18px;
+  color: aliceblue;
+  font-weight: 500;
+  width: 80%;
+  margin: 4rem auto;
+}

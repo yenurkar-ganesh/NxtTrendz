@@ -1,3 +1,4 @@
+import './index.css'
 import {BsDashSquare, BsPlusSquare} from 'react-icons/bs'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import CartContext from '../../context/CartContext'

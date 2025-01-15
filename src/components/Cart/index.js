@@ -1,3 +1,4 @@
+import './index.css'
 import Header from '../Header'
 import CartListView from '../CartListView'
 
