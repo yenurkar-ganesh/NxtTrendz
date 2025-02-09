@@ -36,14 +36,6 @@ const CartListView = () => (
               totalItems > 1 ? 'Items' : 'Item'
             } in cart`}</p>
             <div className="btn-section">
-              <button
-                type="button"
-                className="checkout-button"
-                aria-label="Checkout"
-                onClick={checkoutHandler()}
-              >
-                Checkout
-              </button>
               <PaymentPopup totalAmount={totalAmount} totalItems={totalItems} />
               <button
                 type="button"
